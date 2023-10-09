@@ -8,7 +8,7 @@ def parse_arguments():
     parser.add_argument(
         "--data-location",
         type=str,
-        default=os.path.expanduser('~/data'),
+        default=os.path.expanduser('data'),
         help="The root directory for the datasets.",
     )
     parser.add_argument(

@@ -84,12 +84,12 @@ def evaluate(image_classifier, args):
     for i, dataset_name in enumerate(args.eval_datasets):
         print('Evaluating on', dataset_name)
         dataset_class = getattr(datasets, dataset_name)
+
         dataset = dataset_class(
             image_classifier.val_preprocess,
             location=args.data_location,
             batch_size=args.batch_size
         )
-
         results = eval_single_dataset(image_classifier, dataset, args)
 
         if 'top1' in results:

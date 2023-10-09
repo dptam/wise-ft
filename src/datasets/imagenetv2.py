@@ -1,4 +1,6 @@
 from PIL import Image
+import os
+from .imagenet_classnames import get_classnames
 
 from imagenetv2_pytorch import ImageNetV2Dataset
 
